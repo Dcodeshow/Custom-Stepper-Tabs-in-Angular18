@@ -18,8 +18,9 @@ export class AppComponent {
   }
 
   stepName = [
-    { title: 'Company Details', id: 'company', width: '100px' },
-    { title: 'Contact Details', id: 'contact', width: '150px' },
-    { title: 'Verify Using OTP', id: 'verify', width: '200px' },
+    'Company',
+    'Contact Details Kurla West and Pen Card',
+    'Verify Using OTP and Pen Card',
+    'Adhar Card No',
   ];
 }

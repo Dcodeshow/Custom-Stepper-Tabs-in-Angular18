@@ -1,7 +1,7 @@
 <div class="step-tabs-container">
   <div class="progress-container">
     <ng-container *ngFor="let step of steps; let i = index; let isLast = last">
-      <div>
+      <div class="step-container">
         <div
           [ngClass]="{
             step: true,
@@ -13,7 +13,6 @@
           <div class="step-number">{{ i + 1 }}</div>
           <div
             class="connector"
-            [style.width]="step.width"
             *ngIf="!isLast"
             [ngStyle]="{
               width: i < activeStepIndex ? '100%' : '0%',
@@ -21,7 +20,7 @@
             }"
           ></div>
         </div>
-        <div class="step-title">{{ step.title }}</div>
+        <div class="step-title">{{ step }}</div>
       </div>
     </ng-container>
   </div>

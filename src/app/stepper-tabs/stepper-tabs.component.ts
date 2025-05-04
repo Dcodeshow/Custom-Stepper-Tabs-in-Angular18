@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './stepper-tabs.component.scss',
 })
 export class StepperTabsComponent {
-  @Input() steps: { title: string; id: string; width: string }[] = [];
+  @Input() steps: string[] = [];
 
   @Input() activeStepIndex: number = 0;
 

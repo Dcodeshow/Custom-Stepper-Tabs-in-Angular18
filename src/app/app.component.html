@@ -63,6 +63,26 @@
         >
           Previous
         </button>
+        <button type="button" class="btn btn-primary" (click)="activeStep = 3">
+          Next
+        </button>
+      </form>
+    </div>
+
+    <div *ngIf="activeStep === 3">
+      <h2>Verify Using OTP</h2>
+      <form>
+        <div class="form-group">
+          <label for="otp">Enter OTP</label>
+          <input type="text" id="otp" class="form-control" />
+        </div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="activeStep = 2"
+        >
+          Previous
+        </button>
         <button type="button" class="btn btn-success">Submit</button>
       </form>
     </div>

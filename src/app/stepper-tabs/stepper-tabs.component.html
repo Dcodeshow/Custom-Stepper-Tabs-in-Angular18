@@ -1,0 +1,32 @@
+<div class="step-tabs-container">
+  <div class="progress-container">
+    <ng-container *ngFor="let step of steps; let i = index; let isLast = last">
+      <div>
+        <div
+          [ngClass]="{
+            step: true,
+            active: i === activeStepIndex,
+            completed: i < activeStepIndex
+          }"
+          (click)="isStepValid(i) && setActiveStep(i)"
+        >
+          <div class="step-number">{{ i + 1 }}</div>
+          <div
+            class="connector"
+            [style.width]="step.width"
+            *ngIf="!isLast"
+            [ngStyle]="{
+              width: i < activeStepIndex ? '100%' : '0%',
+              backgroundColor: i < activeStepIndex ? '#4CAF50' : '#ccc'
+            }"
+          ></div>
+        </div>
+        <div class="step-title">{{ step.title }}</div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="tab-content">
+    <ng-content></ng-content>
+  </div>
+</div>

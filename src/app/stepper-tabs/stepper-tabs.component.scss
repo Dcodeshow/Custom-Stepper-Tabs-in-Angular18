@@ -1,0 +1,81 @@
+.step-tabs-container {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  xflex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+
+  &.active {
+    .step-number {
+      background-color: #2d2b4e;
+    }
+
+    .step-title {
+      color: #2d2b4e;
+      font-weight: 600;
+    }
+  }
+
+  &.completed {
+    .step-number {
+      background-color: #4caf50;
+    }
+  }
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+
+  color: #fff;
+  background-color: #d1d1d1;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.step-title {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+.connector {
+  flex: 1;
+  height: 6px;
+  background-color: #d1d1d1;
+  margin: 0 10px;
+  min-width: 100px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.tab-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
